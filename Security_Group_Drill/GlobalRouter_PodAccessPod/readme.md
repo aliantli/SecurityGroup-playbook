@@ -53,9 +53,9 @@ podname:nginx-pod2      pod_ip:172.17.0.194
 curl: (28) Failed to connect to 172.17.0.194 port 80: Connection timed out
 ```
 排查方向:
-```
+`
 节点层面：出现这种情况一般为节点网卡的安全组配置问题，前往节点所绑定的安全组，查看其是否允许来源ip访问端口，如果未放通放通即可
-```
+`
 # 演练环境清理
 ```
 [root@VM-35-20-tlinux terraform]# kubectl delete  -f deployment.yaml
