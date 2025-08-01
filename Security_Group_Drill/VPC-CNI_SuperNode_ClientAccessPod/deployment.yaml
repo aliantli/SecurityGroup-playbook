@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-super
+spec:
+  replicas: 1  # 可超过物理核心数
+  selector:
+    matchLabels:
+      app: nginx-super
+  template:
+    metadata:
+      labels:
+        app: nginx-super
+        node.tencent.com/super-node: "true"  # 关键标签
+    spec:
+      nodeSelector:
+            kubernetes.io/hostname: "eklet-subnet-mw0fqo42-rhl9ztuv"  # 精确匹配节点名称
+      containers:
+      - name: nginx
+        image: nginx:alpine
+        resources:
+          requests:  # 必须设置requests
+            cpu: "100m"
+            memory: "128Mi"
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: node.tencent.com/super-node
+                operator: In
+                values: ["true"]
+      tolerations:
+      - key: "eks.tke.cloud.tencent.com/eklet"
+        operator: "Exists"
+        effect: "NoSchedule"
