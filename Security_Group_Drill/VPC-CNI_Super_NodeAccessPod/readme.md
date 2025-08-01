@@ -59,8 +59,7 @@ podname:nginx-pod       pod_ip:10.0.35.23
 curl: (28) Failed to connect to 10.0.35.23 port 80: Connection timed out
 ```
 **排查方向:**<br>
-出现这种情况可能为pod所绑定安全组配置不正确,可
-根据上述安全组继承规则查看pod所绑定的安全组是否允许原生节点A访问podB服务端口
+出现这种情况可能为pod所绑定安全组配置不正确,可根据上述安全组继承规则查看pod所绑定的安全组是否允许原生节点A访问podB服务端口
 
 # 演练环境清理
 ```
