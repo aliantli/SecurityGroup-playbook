@@ -40,7 +40,7 @@ podA:nginx-pod       pod_ip:10.0.35.23
 [root@VM-35-139-tlinux terraform]# kubectl get pods -o wide -l app=my-app2|awk '{printf "podB:"$1"\t""pod_ip:"$6"\n"}'|grep -v "NAME"|grep -v IP
 podB:nginx-pod2      pod_ip:10.0.35.150
 ```
-## 第二步:登录podA服务podB
+## 第二步:登录podA访问podB
 ```
 [root@VM-35-139-tlinux terraform]# kubectl exec -it nginx-pod -- sh
 #url 10.0.35.150
