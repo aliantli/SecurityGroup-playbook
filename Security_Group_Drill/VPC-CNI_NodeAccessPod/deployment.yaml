@@ -13,7 +13,7 @@ spec:
       labels:
         app: my-app
     spec:
-    nodeSelector:
+      nodeSelector:
         node.kubernetes.io/instance-type:  <node_ip1>
       containers:
       - name: nginx
