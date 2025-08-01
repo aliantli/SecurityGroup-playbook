@@ -39,7 +39,7 @@ TKE版本>=1.20.6，具体操作可参考:https://cloud.tencent.com/document/pro
 ```
 
 # 演练分析
-## 第一步:获取pod名称和访问ip并指导podA和podB
+## 第一步:获取pod名称和访问ip并指定podA和podB
 ```
 [root@VM-35-139-tlinux terraform]# kubectl get pods -o wide -l app=nginx-super1|awk '{printf "podA:"$1"\t""pod_ip:"$6"\n"}'|grep -v "NAME"|grep -v IP
 podA:nginx-pod       pod_ip:10.0.35.23
