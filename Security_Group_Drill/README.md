@@ -12,8 +12,8 @@
 | 场景3  | VPC-CNI   |超级节点|[clb pod访问]()|
 | 场景4  | GlobalRouter  |  原生节点|[clb直连pod访问](./GlobalRouter_clb_Direct_ClientAccessPod)|
 | 场景5  | GlobalRouter  |   原生节点|[clb非直连pod访问](./GlobalRouter_clb_non_Direct_ClientAccessPod)|
-|场景6 |VPC-CNI|原生节点|[pod与pod跨节点访问]|
-|场景7 |VPC-CNI|原生节点|[节点与pod跨节点访问]|
+|场景6 |VPC-CNI|原生节点|[pod与pod跨节点访问](./VPC-CNI_PodAccessPod)|
+|场景7 |VPC-CNI|原生节点|[节点与pod跨节点访问](./VPC-CNI_NodeAccessPod)|
 |场景8 |GlobalRouter |原生节点|[pod与pod跨节点访问](./GlobalRouter_PodAccessPod)|
 |场景9 |GlobalRouter |原生节点|[节点与pod跨节点访问](./GlobalRouter_NodeAccessPod)|
 |场景10 |VPC-CNI|超级节点|[pod与pod跨节点访问]|
