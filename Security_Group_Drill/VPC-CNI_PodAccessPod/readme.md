@@ -6,7 +6,7 @@ VPC-CNI下pod与pod跨节点访问:<br>
 [<img width="633" height="373" alt="Clipboard_Screenshot_1753948754" src="https://github.com/user-attachments/assets/0aa15b09-362c-40a9-b007-4832840505b1" />
 ](./image/flowchart.md)
  <br>安全组1:绑定在podA辅助网卡上，控制podA流量出站，默认关闭可根据需要手动开启<br>
- 安全组2:绑定在podB辅助网卡上，控制流量服务podB，默认关闭可根据需要手动开启<br>
+ 安全组2:绑定在podB辅助网卡上，控制流量访问podB，默认关闭可根据需要手动开启<br>
 
 # 环境部署
 ## 前提条件
