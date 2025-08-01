@@ -6,7 +6,7 @@
 Global Router下pod与pod跨节点访问:<br>
 [<img width="535" height="316" alt="Clipboard_Screenshot_1753962332" src="https://github.com/user-attachments/assets/980face9-7474-4dfa-8dba-e4f79cdef5c5" />
 ](./image/flowchart2.md)
- <br>&emsp; 安全组1:绑定在PodA上，控制podA出站流量<br>
+ <br> 安全组1:绑定在PodA上，控制podA出站流量<br>
  安全组2:绑定在节点B的节点网卡上，控制访问节点B及Pod的流量
 # 环境部署
 ## 前提条件
