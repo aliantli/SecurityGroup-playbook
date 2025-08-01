@@ -54,21 +54,19 @@ curl: (7) Failed to connect to 119.91.244.213 port 80: Connection timed out
 ```
 
 **排查方向:**
-当服务返回504 Gateway Time-out错误时，通常是由于以下安全组配置限制导致：<br>
+当服务返回time-out错误时，通常是由于以下安全组配置限制导致：<br>
 
 可能原因及排查步骤：
 
 原因一：CLB安全组（安全组1）限制排查:<br>
-&emsp;检查CLB绑定的安全组规则<br>
-&emsp;&emsp;确认已放行客户端IP对以下端口的访问：<br>
+&emsp;检查CLB绑定的安全组规则，确认已放行客户端IP对以下端口的访问：<br>
 &emsp;&emsp;HTTP/HTTPS服务暴露的主机端口（CLB外网端口）<br>
 &emsp;若发现流量被拦截，需添加对应的入站规则<br>
 原因二：节点安全组（安全组2）限制排查<br>
-&emsp;若CLB安全组配置正确后仍出现time-out,检查节点网卡绑定的安全组规则<br>
-&emsp;确认已放行客户端IP对以下端口的访问：<br>
+&emsp;若CLB安全组配置正确后仍出现time-out,检查节点网卡绑定的安全组规则，确认已放行客户端IP对以下端口的访问：<br>
 &emsp;&emsp;Pod实际监听的服务端口<br>
 &emsp;若发现流量被拦截，需添加对应的入站规则<br>
-完成上述安全组规则配置后，504 Gateway Time-out问题通常可得到解决。<br>
+完成上述安全组规则配置后，time-out问题通常可得到解决。<br>
 
 # 演练环境清理
 ```
