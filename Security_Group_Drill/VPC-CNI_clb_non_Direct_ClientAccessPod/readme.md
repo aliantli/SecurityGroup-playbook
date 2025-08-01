@@ -5,7 +5,7 @@
 # 访问链路
 VPC-CNI下clb非直连pod访问:<br>
 [<img width="710" height="351" alt="Clipboard_Screenshot_1753946799" src="https://github.com/user-attachments/assets/d76ff741-e630-4618-a959-bbc06187e475" />
-](https://github.com/aliantli/SecurityGroup-playbook/blob/a8105d9a274f13168978fa94b9061825e7b00c77/Security_Group_Drill/VPC-CNI_clb_non_Direct_ClientAccessPod/image/flowchart.md)
+](./image/flowchart.md)
 
  <br>&emsp;在日常生产环境中可以通过在上述三个位置是设置安全组来限制外网流量入站(一般不限制流量出站)，以此控制入口流量的基础过滤，实现流量的精细管控，保障Pod资源安全(pod辅助网卡处的安全组默认关闭可根据自己需求开启)
 
