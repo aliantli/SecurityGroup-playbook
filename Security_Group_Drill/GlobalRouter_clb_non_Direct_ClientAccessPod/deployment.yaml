@@ -1,0 +1,22 @@
+# Deployment 配置
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 1  # 支持多副本
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      nodeSelector:
+        node.kubernetes.io/instance-type:  <node_name> 
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
