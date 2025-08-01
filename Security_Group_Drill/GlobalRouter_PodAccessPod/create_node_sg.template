@@ -1,0 +1,72 @@
+# 安全组：拒绝内网访问，出站全放通
+resource "tencentcloud_security_group" "baseline_sg" {
+  name        = "deny-all-inbound"
+  description = "拒绝内网访问，出站全放通"
+  tags = {
+   <key> ="<values>"
+  }
+}
+
+# 显式拒绝内网入站（默认拒绝，此规则可省略但明确声明更清晰）
+resource "tencentcloud_security_group_rule" "deny_ingress" {
+  security_group_id = tencentcloud_security_group.baseline_sg.id
+  type              = "ingress"
+  cidr_ip           = "10.0.0.0/16"
+  ip_protocol       = "80"
+  policy            = "DROP"     
+  description       = "拒绝内网入站流量"
+}
+
+resource "tencentcloud_security_group_rule" "allow_egress" {
+  security_group_id = tencentcloud_security_group.baseline_sg.id
+  type              = "egress"
+  cidr_ip           = "0.0.0.0/0"
+  ip_protocol       = "ALL"
+  policy            = "ACCEPT"   # 允许所有出站
+  description       = "允许所有出站流量"
+}
+##注解部分为主要配置
+resource "tencentcloud_kubernetes_native_node_pool" "native_nodepool_cvm" {
+  name                = "native"
+  cluster_id          = "cls-runpopmc"   ##集群id
+  type                = "Native"        ##节点类型
+  unschedulable       = false            ##是否封锁节点，true为封锁
+  labels {
+    name  = "test11"
+    value = "test21"
+  }
+
+  native {
+    instance_charge_type     = "POSTPAID_BY_HOUR"    ##按量计费，其他计费模式可能会导致创建节点时卡在第一步
+    instance_types           = ["SA2.MEDIUM2"]    ##机器类型
+    security_group_ids       = [tencentcloud_security_group.baseline_sg.id]    ##安全组id
+    subnet_ids               = ["subnet-mw0fqo42"]    ##子网id
+    auto_repair              = true
+    health_check_policy_name = null
+    enable_autoscaling       = false
+    host_name_pattern        = null
+    replicas                 = 1                #节点池内节点数量
+    machine_type             = "NativeCVM"     # Native原生节点需要开启tat组件才能登录，NativeCVM原生节点CVM模式不需要tat组件但需要用ssh密钥登录
+
+    system_disk {
+      disk_type = "CLOUD_PREMIUM"
+      disk_size = 50
+    }
+
+
+    data_disks {
+        auto_format_and_mount = true
+        disk_type             = "CLOUD_PREMIUM"
+        disk_size             = 50
+        file_system           = "xfs"
+        mount_target          = "/var/lib/container"
+    }
+
+    scaling {
+      min_replicas  = 1
+      max_replicas  = 3
+      create_policy = "ZoneEquality"
+    }
+  }
+}
+##只能使用ssh密钥登��，要免密登录需开启tat组件
