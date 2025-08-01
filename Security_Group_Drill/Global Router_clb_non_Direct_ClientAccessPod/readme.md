@@ -3,8 +3,8 @@
 &emsp;安全组作为容器基础设施层的核心流量控制组件，通过节点边界实施粗粒度访问控制，为容器环境提供基础网络隔离保障。然而，用户常因安全组规则复杂性及配置方式不当导致服务不可访问，本文针对GlobalRouter 网络模式下TKE 集群中创建的原生节点上部署的直连 Pod 服务，利用脚本创建安全组的方式模拟真实生产环境下的网络访问异常，通过引导用户分层逐步排查访问链路,最终掌握安全组配置的核心逻辑
 # 访问链路
 Global Router下clb非直连pod访问:<br>
-[<img width="767" height="382" alt="Clipboard_Screenshot_1753945050" src="https://github.com/user-attachments/assets/7c5c5580-49a7-4b8e-a857-fcc52283c1df" />
-](https://github.com/aliantli/sg_playbook_1/blob/10d011f8b4f18dce47489b54b5ad4708c8f236c7/playbook/Global%20Router%E4%B8%8B%E9%9D%9E%E7%9B%B4%E8%BF%9E%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AEpod%E5%AE%89%E5%85%A8%E7%BB%84%E6%BC%94%E7%BB%83/image/flowchart.md)
+[<img width="767" height="382" alt="Clipboard_Screenshot_1753945050" src="https://github.com/user-attachments/assets/8ebea6b2-e233-4462-a9ac-5f8280467200" />
+](https://github.com/aliantli/SecurityGroup-playbook/blob/623def644aaba50d0b1c3665f10b2d78ffe4ccfa/Security_Group_Drill/Global%20Router_clb_non_Direct_ClientAccessPod/image/flowchart.md)
 <br>&emsp;在日常生产环境中可以通过在上述两个位置是设置安全组来限制外网流量入站(一般对流量出站不做限制)，以此控制入口流量的基础过滤，实现流量的精细管控，保障Pod资源安全
 # 环境部署
 ## 前提条件
