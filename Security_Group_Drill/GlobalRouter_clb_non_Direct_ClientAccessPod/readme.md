@@ -21,7 +21,7 @@ TKE版本>=1.20.6，具体操作可参考:https://cloud.tencent.com/document/pro
 
 
 **以terraform为例**<br>
-1.创建原生节点与安全组1、安全组2，并将安全组2绑定到原生节点上
+1.创建原生节点与安全组1、安全组2，并将安全组2绑定到原生节点的节点网卡上
 ```
 [root@VM-35-179-tlinux ~]# sh create_node_sg_tf.sh
 [root@VM-35-179-tlinux ~]# terraform apply -auto-approve
