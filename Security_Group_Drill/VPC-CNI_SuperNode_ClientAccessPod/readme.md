@@ -55,9 +55,9 @@ root@VM-35-82-tlinux ~]# curl 193.112.115.15
 curl: (7) Failed to connect to 193.112.115.15 port 80: Connection timed out
 ```
 排查方向:
-```
+`
 clb层面:出现这种情况一般为clb安全组配置问题，查看clb绑定的安全组，查看其是否放通http/https的监听端口
-```
+`
 
 ### 若放通clb层安全组后出现以下现象(time out):
 ```
@@ -65,10 +65,10 @@ root@VM-35-82-tlinux ~]# curl 193.112.115.15
 curl: (7) Failed to connect to 193.112.115.15 port 80: Connection timed out
 ```
 排查方向:
-```
+`
 ##出现这种情况可能为pod所绑定安全组配置不正确
 根据上述安全组继承规则查看pod所绑定的安全组是否允许来源ip访问pod服务端口
-```
+`
 # 演练环境清理
 ```
 [root@VM-35-179-tlinux ~]# kubectl delete -f service.yaml
