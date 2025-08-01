@@ -5,7 +5,7 @@
 # 访问链路
 VPC-CNI超级节点下clb pod访问<br>
 [<img width="576" height="222" alt="Clipboard_Screenshot_1753947044" src="https://github.com/user-attachments/assets/6968b52c-c2a3-4770-bf02-417c18aa630b" />
-](https://github.com/aliantli/SecurityGroup-playbook/blob/a6130a7eacbaf268b5c1a4afc78c7d939fccd692/Security_Group_Drill/VPC-CNI_SuperNode_ClientAccessPod/image/flowchart1.md)
+](./image/flowchart1.md)
  <br>&emsp;在日常生产环境中可以通过在上述两个位置是设置安全组来限制外网流量入站(一般对流量出站不做限制)，以此控制入口流量的基础过滤，实现流量的精细管控，保障Pod资源安全
 <br>**&emsp;安全组2继承规则:**<br>
 |场景|是否为工作负载绑定安全组|是否为节点绑定安全组|实际使用安全组|
