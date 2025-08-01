@@ -11,8 +11,7 @@ VPC-CNI下clb直连pod访问:<br>
 **1.tke集群要求**
 
 TKE版本>=1.20.6，具体操作可参考:https://cloud.tencent.com/document/product/457/103981<br>
-网络模式:VPC-CNI<br>
-详情可参考:https://cloud.tencent.com/document/product/457/50355
+网络模式:VPC-CNI,详情可参考:https://cloud.tencent.com/document/product/457/50355
 
 **2.工具准备**
 
