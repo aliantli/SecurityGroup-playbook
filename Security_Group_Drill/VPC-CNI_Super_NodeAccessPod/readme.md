@@ -6,7 +6,7 @@
 VPC-CNI下原生节点A与超级节点B内pod跨节点访问:<br>
 [<img width="654" height="321" alt="Clipboard_Screenshot_1754028901" src="https://github.com/user-attachments/assets/10a219d9-65cf-412d-b5c1-1d2cfab2cb79" />
 ](./image/flowchart.md)
- 安全组1:绑定在原生节点A上，控制原生节点A流量出站<br>
+ <br>安全组1:绑定在原生节点A上，控制原生节点A流量出站<br>
  安全组2:绑定在超级节点B内pod辅助网卡上，控制流量访问podB
 <br>**&emsp;安全组继承规则:**<br>
 |场景|是否为工作负载绑定安全组|是否为节点绑定安全组|实际使用安全组|
