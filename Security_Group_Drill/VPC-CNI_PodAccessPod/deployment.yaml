@@ -13,7 +13,7 @@ spec:
       labels:
         app: my-app1
     spec:
-    nodeSelector:
+      nodeSelector:
         node.kubernetes.io/instance-type:  <node_ip1>
       containers:
       - name: nginx
@@ -36,7 +36,7 @@ spec:
       labels:
         app: my-app2
     spec:
-    nodeSelector:
+      nodeSelector:
         node.kubernetes.io/instance-type:  <node_ip2>
       containers:
       - name: nginx2
