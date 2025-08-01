@@ -32,22 +32,22 @@ TKE版本>=1.20.6，具体操作可参考:https://cloud.tencent.com/document/pro
 ```
 
 # 演练分析
-## 第一步:获取服务名与访问ip
+## 第一步:获取pod名称与访问ip并指定podA和podB
 ```
 [root@VM-35-20-tlinux terraform]# kubectl get pods -o wide -l app=my-app|awk '{printf "podname:"$1"\t""pod_ip:"$6"\n"}'|grep -v "NAME"|grep -v IP
 podname:nginx-pod       pod_ip:172.17.0.131
 [root@VM-35-20-tlinux terraform]# kubectl get pods -o wide -l app=my-app2|awk '{printf "podname:"$1"\t""pod_ip:"$6"\n"}'|grep -v "NAME"|grep -v IP
 podname:nginx-pod2      pod_ip:172.17.0.194
 ```
-## 第二步:登录任意pod
+## 第二步:登录podA并访问podB
 ```
 [root@VM-35-20-tlinux terraform]# kubectl exec -it nginx-pod -- sh
-#
+#curl 172.17.0.194
 ```
 ## 第三步:问题分析
 ### 若访问时出现以下现象(time out):
 ```
-# 172.17.0.194
+# curl 172.17.0.194
 curl: (28) Failed to connect to 172.17.0.194 port 80: Connection timed out
 ```
 **排查方向:**<br>
