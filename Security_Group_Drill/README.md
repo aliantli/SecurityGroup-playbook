@@ -9,7 +9,7 @@
 |----------------|----------------|------|--|
 | 场景1   | VPC-CNI   |原生节点|[clb直连pod访问](./VPC-CNI_clb_Direct_ClientAccessPod)|
 | 场景2  | VPC-CNI      |原生节点|[clb非直连pod访问](./VPC-CNI_clb_non_Direct_ClientAccessPod)|
-| 场景3  | VPC-CNI   |超级节点|[clb pod访问]()|
+| 场景3  | VPC-CNI   |超级节点|[clb pod访问](./VPC-CNI_SuperNode_ClientAccessPod)|
 | 场景4  | GlobalRouter  |  原生节点|[clb直连pod访问](./GlobalRouter_clb_Direct_ClientAccessPod)|
 | 场景5  | GlobalRouter  |   原生节点|[clb非直连pod访问](./GlobalRouter_clb_non_Direct_ClientAccessPod)|
 |场景6 |VPC-CNI|原生节点|[pod与pod跨节点访问](./VPC-CNI_PodAccessPod)|
