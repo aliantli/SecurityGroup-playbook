@@ -4,7 +4,7 @@
 # 访问链路
 Global Router下clb非直连pod访问:<br>
 [<img width="767" height="382" alt="Clipboard_Screenshot_1753945050" src="https://github.com/user-attachments/assets/8ebea6b2-e233-4462-a9ac-5f8280467200" />
-](https://github.com/aliantli/SecurityGroup-playbook/blob/587a3a7539328db522b12ebb5757280447909ae8/Security_Group_Drill/GlobalRouter_clb_non_Direct_ClientAccessPod/image/flowchart.md)
+](./image/flowchart.md)
 <br>&emsp;在日常生产环境中可以通过在上述两个位置是设置安全组来限制外网流量入站(一般对流量出站不做限制)，以此控制入口流量的基础过滤，实现流量的精细管控，保障Pod资源安全
 # 环境部署
 ## 前提条件
