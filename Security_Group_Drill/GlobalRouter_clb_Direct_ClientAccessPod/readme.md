@@ -6,9 +6,8 @@
 Global Router下clb直连pod访问:<br>
 [<img width="767" height="382" alt="Clipboard_Screenshot_1753945050" src="https://github.com/user-attachments/assets/0f9227c2-31cd-49ed-b608-81f2765898f8" />
 ](./image/flowchart.md)
-br>安全组1​​：绑定在负载均衡器（CLB）上，作为首道防线控制访问CLB的流量。<br>
+<br>安全组1​​：绑定在负载均衡器（CLB）上，作为首道防线控制访问CLB的流量。<br>
 ​​安全组2​​：绑定在节点网卡上，控制访问Pod的流量。
-# 环境部署
 # 环境部署
 ## 前提条件
 **1.tke集群要求**
