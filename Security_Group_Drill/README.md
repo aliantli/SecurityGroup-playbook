@@ -7,8 +7,8 @@
 ## 安全组访问场景
 | 场景            | 网络模式         |节点类型 |访问场景|
 |----------------|----------------|------|--|
-| 场景1   | VPC-CNI   |原生节点|[clb直连pod访问]|
-| 场景2  | VPC-CNI      |原生节点|[clb非直连pod访问]|
+| 场景1   | VPC-CNI   |原生节点|[clb直连pod访问](./VPC-CNI_clb_Direct_ClientAccessPod)|
+| 场景2  | VPC-CNI      |原生节点|[clb非直连pod访问](./VPC-CNI_clb_non_Direct_ClientAccessPod)|
 | 场景3  | VPC-CNI   |超级节点|[clb pod访问]()|
 | 场景4  | GlobalRouter  |  原生节点|[clb直连pod访问](./GlobalRouter_clb_Direct_ClientAccessPod)|
 | 场景5  | GlobalRouter  |   原生节点|[clb非直连pod访问](./GlobalRouter_clb_non_Direct_ClientAccessPod)|
