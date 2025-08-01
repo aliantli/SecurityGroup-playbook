@@ -55,7 +55,7 @@ curl: (28) Failed to connect to 10.0.35.150 port 80: Connection timed out
 ```
 **排查方向:**<br>
 
-出现这种情况可能为pod辅助网卡安全组被开启且安全组配置不正确,查看其绑定的安全组是否允许来podA访问podB服务端口如果未放通放通即可
+出现这种情况可能为pod辅助网卡安全组被开启且安全组配置不正确,查看其绑定的安全组是否允许podA访问podB服务端口如果未放通放通即可
 ```
 [root@VM-35-179-tlinux ~]# kubectl logs -n kube-system deploy/tke-eni-ipamd | grep "Event"|grep "security groups from"|awk '{print $24}'|awk -F'[' '{print $2}'|awk -F']' '{print $1}'                            ##查询其所绑定的安全组
 sg-xxxxxx            ##输出的为pod(辅助)网卡所绑定的安全组id
