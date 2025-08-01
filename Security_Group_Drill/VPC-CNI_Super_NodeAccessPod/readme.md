@@ -5,7 +5,7 @@
 # 访问链路
 VPC-CNI下原生节点A与超级节点B内pod跨节点访问:<br>
 [<img width="654" height="321" alt="Clipboard_Screenshot_1754028901" src="https://github.com/user-attachments/assets/10a219d9-65cf-412d-b5c1-1d2cfab2cb79" />
-](https://github.com/aliantli/SecurityGroup-playbook/blob/9ac47bf75da32f2eeb7ada9e0c3f72a97a0be9c5/Security_Group_Drill/VPC-CNI_Super_NodeAccessPod/image/flowchart.md)
+](./image/flowchart.md)
  <br>&emsp;在日常生产环境中可以通过在上述两处安全组位置设置规则来限制流量入站(一般对流量出站不做限制)，以此控制入口流量的基础过滤，实现流量的精细管控，保障Pod资源安全
 <br>**&emsp;安全组继承规则:**<br>
 |场景|是否为工作负载绑定安全组|是否为节点绑定安全组|实际使用安全组|
