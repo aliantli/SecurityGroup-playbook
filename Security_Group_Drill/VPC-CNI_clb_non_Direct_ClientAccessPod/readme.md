@@ -5,7 +5,7 @@
 # 访问链路
 VPC-CNI下clb非直连pod访问:<br>
 [<img width="710" height="351" alt="Clipboard_Screenshot_1753946799" src="https://github.com/user-attachments/assets/d76ff741-e630-4618-a959-bbc06187e475" />
-](./image/flowchart.md)
+](./image/flowchart.md)<br>
 安全组1:绑定在负载均衡器(CLB)上，作为首道防线控制访问CLB的流量.<br>
 安全组2:绑定在节点(nodeport)上，控制访问节点的流量<br>
 安全组3:绑定在pod辅助网卡上，控制访问pod的流量，默认关闭可根据需要手动开启<br>
