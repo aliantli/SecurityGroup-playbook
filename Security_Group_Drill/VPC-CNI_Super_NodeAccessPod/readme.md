@@ -48,7 +48,7 @@ podname:nginx-pod       pod_ip:10.0.35.23
 [root@VM-35-139-tlinux terraform]#  kubectl get nodes -o wide -l test11=test21 |awk '{print $6}'|grep -v INTERNAL-IP
 10.0.35.97
 [root@VM-35-139-tlinux terraform]# ssh 10.0.35.97
-[root@VM-35-97-tlinux ~]#
+[root@VM-35-97-tlinux ~]#curl 10.0.35.23
 
 ```
 ## 第二步:问题分析
