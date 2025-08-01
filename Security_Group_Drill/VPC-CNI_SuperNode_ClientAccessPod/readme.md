@@ -4,8 +4,8 @@
 
 # 访问链路
 VPC-CNI超级节点下clb pod访问<br>
-[<img width="576" height="222" alt="Clipboard_Screenshot_1753947044" src="https://github.com/user-attachments/assets/4c31acab-f5e5-4d3f-a5cc-b1ad7c70e1bb" />
-](https://github.com/aliantli/sg_playbook_1/blob/d6c7da2565dba6e744b7be53eccae7c939f8bbec/playbook/VPC-CNI%E8%B6%85%E7%BA%A7%E8%8A%82%E7%82%B9%E4%B8%8B%E7%9B%B4%E8%BF%9E%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AEpod%E5%AE%89%E5%85%A8%E7%BB%84%E6%BC%94%E7%BB%83/image/flowchart1.md)
+[<img width="576" height="222" alt="Clipboard_Screenshot_1753947044" src="https://github.com/user-attachments/assets/6968b52c-c2a3-4770-bf02-417c18aa630b" />
+](https://github.com/aliantli/SecurityGroup-playbook/blob/e00fbf51900b4abdb1bbd00b6290c492cbbd908f/Security_Group_Drill/VPC-CNI_SuperNode_ClientAccessPod/image/flowchart1.md)
  <br>&emsp;在日常生产环境中可以通过在上述两个位置是设置安全组来限制外网流量入站(一般对流量出站不做限制)，以此控制入口流量的基础过滤，实现流量的精细管控，保障Pod资源安全
 <br>**&emsp;安全组2继承规则:**<br>
 |场景|是否为工作负载绑定安全组|是否为节点绑定安全组|实际使用安全组|
