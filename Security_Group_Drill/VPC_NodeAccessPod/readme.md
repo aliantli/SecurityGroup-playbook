@@ -4,8 +4,8 @@
 
 # 访问链路
 VPC-CNI下节点与pod跨节点访问:<br>
-[<img width="497" height="267" alt="Clipboard_Screenshot_1753963102" src="https://github.com/user-attachments/assets/88e5bb8e-0dc2-48e1-aeeb-6137c18c5e8c" />
-](https://github.com/aliantli/sg_playbook_1/blob/96d2a354c77489bd326284f52b3b8f1dbee3c0b4/playbook/VPC-NodeAccessPod/image/flowchart2.md)
+[<img width="497" height="267" alt="Clipboard_Screenshot_1753963102" src="https://github.com/user-attachments/assets/49851d3e-a6f9-4a00-8ba4-1331495e2179" />
+](https://github.com/aliantli/SecurityGroup-playbook/blob/56d8955ee0b6bc9f717423cbcbf1e70d9d1f9d84/Security_Group_Drill/VPC_NodeAccessPod/image/flowchart2.md)
  <br>&emsp;在日常生产环境中可以通过在上述两处安全组位置设置规则来限制流量入站(一般对流量出站不做限制)，以此控制入口流量的基础过滤，实现流量的精细管控，保障Pod资源安全(pod辅助网卡处的安全组默认关闭可根据自己需求开启)
 
 # 环境部署
