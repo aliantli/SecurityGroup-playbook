@@ -6,7 +6,7 @@
 VPC-CNI超级节点下clb pod访问<br>
 [<img width="576" height="222" alt="Clipboard_Screenshot_1753947044" src="https://github.com/user-attachments/assets/6968b52c-c2a3-4770-bf02-417c18aa630b" />
 ](./image/flowchart1.md)
- <br>安全组1​​：绑定在负载均衡器(CLB)上，作为首道防线控制访问CLB的流量。
+ <br>安全组1​​：绑定在负载均衡器(CLB)上，作为首道防线控制访问CLB的流量。<br>
 ​​安全组2​​：绑定在pod网卡上，控制访问Pod的流量。
 <br>**&emsp;安全组2继承规则:**<br>
 |场景|是否为工作负载绑定安全组|是否为节点绑定安全组|实际使用安全组|
