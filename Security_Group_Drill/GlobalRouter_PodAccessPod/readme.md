@@ -5,7 +5,7 @@
 # 访问链路
 Global Router下pod与pod跨节点访问:<br>
 [<img width="535" height="316" alt="Clipboard_Screenshot_1753962332" src="https://github.com/user-attachments/assets/980face9-7474-4dfa-8dba-e4f79cdef5c5" />
-](https://github.com/aliantli/SecurityGroup-playbook/blob/b6c1dbcf392f5663b071adb392d3a40241d6c590/Security_Group_Drill/GlobalRouter_PodAccessPod/image/flowchart2.md)
+](./image/flowchart2.md)
  <br>&emsp;在日常生产环境中可以通过在上述两处安全组位置设置规则来限制流量入站(一般对流量出站不做限制)，以此控制入口流量的基础过滤，实现流量的精细管控，保障Pod资源安全
 
 # 环境部署
