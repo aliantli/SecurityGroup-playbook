@@ -15,7 +15,7 @@
 |场景6 |VPC-CNI|原生节点|[pod与pod跨节点访问]|
 |场景7 |VPC-CNI|原生节点|[节点与pod跨节点访问]|
 |场景8 |GlobalRouter |原生节点|[pod与pod跨节点访问]|
-|场景9 |GlobalRouter |原生节点|[节点与pod跨节点访问](Security_Group_Drill/GlobalRouter_NodeAccessPod)|
+|场景9 |GlobalRouter |原生节点|[节点与pod跨节点访问](./GlobalRouter_NodeAccessPod)|
 |场景10 |VPC-CNI|超级节点|[pod与pod跨节点访问]|
 |场景11 |VPC-CNI|超级节点|[原生节点与pod跨节点访问]|
 
